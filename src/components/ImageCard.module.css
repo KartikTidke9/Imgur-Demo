@@ -1,0 +1,83 @@
+.slide_in {
+  animation: slide_in 0.3s linear forwards;
+}
+
+@keyframes slide_in {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.image_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.image_card:hover {
+  cursor: pointer;
+}
+
+.image_container {
+  width: 20rem;
+  height: 15rem;
+}
+
+.image {
+  width: 20rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 20rem;
+  height: 5rem;
+  background-color: #474a51;
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: "Arial Narrow Bold", sans-serif;
+  font-weight: 600;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #b4b9c2;
+  font-size: 0.9rem;
+}
+
+.likes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.comments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.views {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.3rem;
+}

@@ -1,0 +1,8 @@
+.image_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: -5rem 5rem;
+}
+
