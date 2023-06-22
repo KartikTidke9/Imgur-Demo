@@ -1,29 +1,30 @@
 import axios from "axios";
-import {
-  CLIENT_KEY,
-  SEARCH_IMAGE_API_URL,
-  SEARCH_RANDOM_IMAGE_API_URL,
-  SEARCH_SIGNLE_IMAGE_API_URL,
-  SEARCH_EDITORIAL_FEED_API_URL,
-  SEARCH_TOPIC_TAGS_API_URL,
-} from "../../config";
-// import dotenv from "dotenv";
-// dotenv.config();
-// const {
+// import {
 //   CLIENT_KEY,
 //   SEARCH_IMAGE_API_URL,
 //   SEARCH_RANDOM_IMAGE_API_URL,
 //   SEARCH_SIGNLE_IMAGE_API_URL,
 //   SEARCH_EDITORIAL_FEED_API_URL,
 //   SEARCH_TOPIC_TAGS_API_URL,
-// } = process.env;
+// } from "./config";
+
+// import dotenv from "dotenv";
+// dotenv.config();
+const {
+  REACT_APP_CLIENT_KEY,
+  REACT_APP_SEARCH_IMAGE_API_URL,
+  REACT_APP_SEARCH_RANDOM_IMAGE_API_URL,
+  REACT_APP_SEARCH_SIGNLE_IMAGE_API_URL,
+  REACT_APP_SEARCH_EDITORIAL_FEED_API_URL,
+  REACT_APP_SEARCH_TOPIC_TAGS_API_URL,
+} = process.env;
 
 //getting photos by search term
 const searchImages = async (term, page, order_by) => {
   try {
-    const response = await axios.get(SEARCH_IMAGE_API_URL, {
+    const response = await axios.get(REACT_APP_SEARCH_IMAGE_API_URL, {
       headers: {
-        Authorization: CLIENT_KEY,
+        Authorization: REACT_APP_CLIENT_KEY,
       },
       params: {
         query: term,
@@ -42,9 +43,9 @@ const searchImages = async (term, page, order_by) => {
 //getting random photos
 const searchRandomImages = async () => {
   try {
-    const response = await axios.get(SEARCH_RANDOM_IMAGE_API_URL, {
+    const response = await axios.get(REACT_APP_SEARCH_RANDOM_IMAGE_API_URL, {
       headers: {
-        Authorization: CLIENT_KEY,
+        Authorization: REACT_APP_CLIENT_KEY,
       },
       params: {
         count: 30,
@@ -60,9 +61,9 @@ const searchRandomImages = async () => {
 //getting a single photo
 const getSingleImage = async (id) => {
   try {
-    const response = await axios.get(SEARCH_SIGNLE_IMAGE_API_URL + id, {
+    const response = await axios.get(REACT_APP_SEARCH_SIGNLE_IMAGE_API_URL + id, {
       headers: {
-        Authorization: CLIENT_KEY,
+        Authorization: REACT_APP_CLIENT_KEY,
       },
     });
     // console.log(response.data);
@@ -75,9 +76,9 @@ const getSingleImage = async (id) => {
 //getting a page from editorial feed
 const getEditorialPage = async (order_by) => {
   try {
-    const response = await axios.get(SEARCH_EDITORIAL_FEED_API_URL, {
+    const response = await axios.get(REACT_APP_SEARCH_EDITORIAL_FEED_API_URL, {
       headers: {
-        Authorization: CLIENT_KEY,
+        Authorization: REACT_APP_CLIENT_KEY,
       },
       params: {
         page: 1,
@@ -95,9 +96,9 @@ const getEditorialPage = async (order_by) => {
 //getting a new topics
 const getNewTopics = async () => {
   try {
-    const response = await axios.get(SEARCH_TOPIC_TAGS_API_URL, {
+    const response = await axios.get(REACT_APP_SEARCH_TOPIC_TAGS_API_URL, {
       headers: {
-        Authorization: CLIENT_KEY,
+        Authorization: REACT_APP_CLIENT_KEY,
       },
       params: {
         per_page: 20,
