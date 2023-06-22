@@ -1,22 +1,22 @@
 import axios from "axios";
-// import {
-//   CLIENT_KEY,
-//   SEARCH_IMAGE_API_URL,
-//   SEARCH_RANDOM_IMAGE_API_URL,
-//   SEARCH_SIGNLE_IMAGE_API_URL,
-//   SEARCH_EDITORIAL_FEED_API_URL,
-//   SEARCH_TOPIC_TAGS_API_URL,
-// } from "./config";
-import dotenv from "dotenv";
-dotenv.config();
-const {
+import {
   CLIENT_KEY,
   SEARCH_IMAGE_API_URL,
   SEARCH_RANDOM_IMAGE_API_URL,
   SEARCH_SIGNLE_IMAGE_API_URL,
   SEARCH_EDITORIAL_FEED_API_URL,
   SEARCH_TOPIC_TAGS_API_URL,
-} = process.env;
+} from "./config";
+// import dotenv from "dotenv";
+// dotenv.config();
+// const {
+//   CLIENT_KEY,
+//   SEARCH_IMAGE_API_URL,
+//   SEARCH_RANDOM_IMAGE_API_URL,
+//   SEARCH_SIGNLE_IMAGE_API_URL,
+//   SEARCH_EDITORIAL_FEED_API_URL,
+//   SEARCH_TOPIC_TAGS_API_URL,
+// } = process.env;
 
 //getting photos by search term
 const searchImages = async (term, page, order_by) => {
