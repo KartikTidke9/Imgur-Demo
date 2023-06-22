@@ -6,7 +6,7 @@ import {
   SEARCH_SIGNLE_IMAGE_API_URL,
   SEARCH_EDITORIAL_FEED_API_URL,
   SEARCH_TOPIC_TAGS_API_URL,
-} from "./config";
+} from "../../config";
 // import dotenv from "dotenv";
 // dotenv.config();
 // const {
